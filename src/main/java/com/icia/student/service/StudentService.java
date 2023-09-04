@@ -28,4 +28,22 @@ public class StudentService {
     public StudentDTO findById(Long id) {
         return studentRepository.findById(id);
     }
+
+    public boolean delete(Long id) {
+        int result = studentRepository.delete(id);;
+        if (result>0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean update(StudentDTO studentDTO) {
+        int result = studentRepository.update(studentDTO);
+        if (result>0){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }

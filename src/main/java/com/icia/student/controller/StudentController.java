@@ -49,4 +49,33 @@ public class StudentController {
         model.addAttribute("student",studentDTO);
         return "detail";
     }
+
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") Long id){
+        boolean result = studentService.delete(id);
+        if (result){
+            System.out.println("삭제에 성공했습니다.");
+        }else {
+            System.out.println("삭제에 실패했습니다.");
+        }
+        return "list";
+    }
+
+    @GetMapping("/update")
+    public String update(@RequestParam("id") Long id, Model model){
+        StudentDTO studentDTO = studentService.findById(id);
+        model.addAttribute("student", studentDTO);
+        return "update";
+    }
+
+    @PostMapping("/update")
+    public String update(@ModelAttribute StudentDTO studentDTO){
+        boolean result = studentService.update(studentDTO);
+        if (result) {
+            System.out.println("업데이트 성공");
+        }else {
+            System.out.println("업데이트 실패");
+        }
+        return "list";
+    }
 }

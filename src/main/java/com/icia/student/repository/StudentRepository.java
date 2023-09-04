@@ -24,4 +24,12 @@ public class StudentRepository {
     public StudentDTO findById(Long id) {
         return sql.selectOne("Student.findById",id);
     }
+
+    public int delete(Long id) {
+        return sql.delete("Student.delete", id);
+    }
+
+    public int update(StudentDTO studentDTO) {
+        return sql.update("Student.update", studentDTO);
+    }
 }

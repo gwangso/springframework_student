@@ -13,25 +13,29 @@
     <div class="row m-5">
         <div clas="col">
             <h2 class="text-center mb-3">save.jsp</h2>
-            <form class="" method="post">
+            <form method="post">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">id</span>
+                    <input class="form-control" type="text" name="id" value="${student.id}" readonly>
+                </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">학번</span>
-                    <input class="form-control" type="text" name="studentNumber">
+                    <input class="form-control" type="text" name="studentNumber" value="${student.studentNumber}">
                 </div>
                 <br>
                 <div class="input-group mb-3">
                     <span class="input-group-text">이름</span>
-                    <input class="form-control" type="text" name="studentName">
+                    <input class="form-control" type="text" name="studentName" value="${student.studentName}">
                 </div>
                 <br>
                 <div class="input-group mb-3">
                     <span class="input-group-text">학과</span>
-                    <input class="form-control" type="text" name="studentMajor">
+                    <input class="form-control" type="text" name="studentMajor" value="${student.studentMajor}">
                 </div>
                 <br>
                 <div class="input-group mb-3">
                     <span class="input-group-text">전화번호</span>
-                    <input class="form-control" type="text" name="studentMobile">
+                    <input class="form-control" type="text" name="studentMobile" value="${student.studentMobile}">
                 </div>
                 <br>
                 <br>
@@ -39,6 +43,8 @@
                 <input class="btn btn-primary" type="reset" value="취소">
             </form>
             <a  href="/">처음으로 돌아가기</a>
+            <br>
+            <a  href="/list">list로 돌아가기</a>
         </div>
     </div>
 
