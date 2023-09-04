@@ -47,6 +47,5 @@
             <a  href="/list">list로 돌아가기</a>
         </div>
     </div>
-
 </body>
 </html>
