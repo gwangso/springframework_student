@@ -28,7 +28,7 @@ public class StudentController {
         boolean result = studentService.save(studentDTO);
         if (result) {
             System.out.println("학생등록 성공");
-            return "index";
+            return "redirect:/list";
         }else {
             System.out.println("학생등록 실패");
             return "save";
@@ -58,7 +58,7 @@ public class StudentController {
         }else {
             System.out.println("삭제에 실패했습니다.");
         }
-        return "list";
+        return "redirect:/list";
     }
 
     @GetMapping("/update")
@@ -76,6 +76,6 @@ public class StudentController {
         }else {
             System.out.println("업데이트 실패");
         }
-        return "list";
+        return "redirect:/list";
     }
 }
