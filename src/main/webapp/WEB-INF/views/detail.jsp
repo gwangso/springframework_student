@@ -15,9 +15,13 @@
         <div clas="col">
             <h2>detail.jsp</h2>
             학번 : ${student.studentNumber}
+            <br>
             이름 : ${student.studentName}
+            <br>
             학과 : ${student.studentMajor}
+            <br>
             전화번호 : ${student.studentMobile}
+            <hr>
             <a href="/list">list로 돌아가기</a>
         </div>
     </div>
