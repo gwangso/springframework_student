@@ -46,10 +46,10 @@
                                     index.jsp를 출력함.
                         -->
                         <td>
-                            <button class="btn btn-primary" studentId="${student.id}">수정</button>
+                            <button class="btn btn-primary" onclick="update_fn('${student.id}')" studentId="${student.id}">수정</button>
                         </td>
                         <td>
-                            <button class="btn btn-danger" studentId="${student.id}">삭제</button>
+                            <button class="btn btn-danger" onclick="delete_fn('${student.id}')" studentId="${student.id}">삭제</button>
                         </td>
                     </tr>
                     </c:forEach>
@@ -63,15 +63,25 @@
 </body>
 
 <script>
-$("#div-list").on("click", ".btn-primary", function(){
-    const id = $(this).attr("studentId");
-    location.href="/update?id="+id
-});
+    /*
+    $("#div-list").on("click", ".btn-primary", function(){
+        const id = $(this).attr("studentId");
+        location.href="/update?id="+id
+    });
 
-$("#div-list").on("click", ".btn-danger", function(){
-    const id = $(this).attr("studentId");
-    location.href="/delete?id="+id
-});
+    $("#div-list").on("click", ".btn-danger", function(){
+        const id = $(this).attr("studentId");
+        location.href="/delete?id="+id
+    });
+    */
+    const update_fn = (id) =>{
+        location.href="/update?id" + id;
+    }
+    const delete_fn = (id) =>{
+        location.href="/delete?id" + id;
+    }
 </script>
+
+
 
 </html>
