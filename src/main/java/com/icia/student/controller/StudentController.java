@@ -76,6 +76,7 @@ public class StudentController {
         }else {
             System.out.println("업데이트 실패");
         }
+
         return "redirect:/list";
     }
 }

@@ -74,11 +74,11 @@
         location.href="/delete?id="+id
     });
     */
-    const update_fn = (id) =>{
-        location.href="/update?id" + id;
+    const update_fn = (id) => {
+        location.href="/update?id="+id;
     }
-    const delete_fn = (id) =>{
-        location.href="/delete?id" + id;
+    const delete_fn = (id) => {
+        location.href="/delete?id="+id;
     }
 </script>
 
